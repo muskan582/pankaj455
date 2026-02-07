@@ -2,140 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WAY2LAABH™ | Elite Trading Mastery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PANKAJ BHARDWAJ | WAY2LAABH™</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --gold-primary: #D4AF37;
-            --gold-gradient: linear-gradient(135deg, #e5c06d 0%, #b8932d 100%);
-            --bg-dark: #000000;
-            --card-glass: rgba(255, 255, 255, 0.05);
+            --gold: #D4AF37;
+            --gold-bright: #FFDF00;
+            --gold-gradient: linear-gradient(135deg, #fceabb 0%, #fccd4d 50%, #f8b500 100%);
+            --dark-bg: #050505;
+            --glass: rgba(255, 255, 255, 0.04);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
-        body {
-            background-color: var(--bg-dark);
-            background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
-            color: #fff;
+        /* Essential Reset & Speed */
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body { 
+            background: var(--dark-bg); 
+            background-image: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #050505 100%);
+            color: #fff; 
+            font-family: 'Poppins', sans-serif;
             min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             overflow-x: hidden;
         }
 
-        .main-container {
+        .container {
             width: 100%;
-            max-width: 600px;
-            padding: 20px;
+            max-width: 480px; /* Perfect for mobile viewing */
+            padding: 24px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            animation: fadeIn 0.8s ease-out;
         }
 
-        /* Centered Logo from reference */
+        /* Attractive Logo Section */
+        .brand-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
         .brand-logo {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 30px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            border: 2px solid var(--gold-primary);
-            padding: 10px;
-            background: #050505;
-            object-fit: contain;
+            border: 3px solid var(--gold);
+            padding: 5px;
+            background: #000;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            animation: pulse 2s infinite ease-in-out;
         }
 
+        /* Typography */
         h1 {
-            font-size: 2.2rem;
-            letter-spacing: 2px;
-            color: var(--gold-primary);
-            margin-bottom: 10px;
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            background: linear-gradient(to right, #fff, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-transform: uppercase;
+            margin-bottom: 4px;
         }
 
         .subtitle {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             letter-spacing: 4px;
-            color: #ffffff;
-            opacity: 0.8;
-            margin-bottom: 40px;
+            color: var(--gold);
             text-transform: uppercase;
+            font-weight: 600;
+            margin-bottom: 25px;
+            opacity: 0.9;
         }
 
-        /* Centered Stats Card like the image */
-        .glass-box {
-            background: var(--card-glass);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            padding: 40px 30px;
+        /* Glassmorphism Card */
+        .card {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
             border-radius: 24px;
+            padding: 30px 20px;
             width: 100%;
-            margin-bottom: 40px;
-        }
-
-        .glass-box p {
-            color: #ccc;
-            font-size: 1rem;
             margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #d1d1d1;
             line-height: 1.6;
+            margin-bottom: 25px;
         }
 
-        .stats-row {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 25px;
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--glass-border);
+            padding-top: 20px;
+            gap: 10px;
         }
 
-        .stat-item h3 { color: var(--gold-primary); font-size: 1.5rem; margin-bottom: 5px; }
-        .stat-item p { font-size: 0.7rem; text-transform: uppercase; color: #888; margin: 0; }
+        .stat-item h3 { color: var(--gold); font-size: 1.2rem; margin-bottom: 2px; }
+        .stat-item p { font-size: 0.65rem; color: #888; text-transform: uppercase; margin: 0; font-weight: 600; }
 
-        /* Gold Gradient Button */
-        .btn-gold {
+        /* Optimized Mobile Button */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 20px; /* Larger tap area for mobile */
             background: var(--gold-gradient);
             color: #000;
-            width: 100%;
-            padding: 20px;
-            border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 1.1rem;
+            border-radius: 50px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: 0.3s;
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
         }
 
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        .btn:active { transform: scale(0.96); }
+
+        /* Shimmer Effect for Attractiveness */
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.4), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
         }
 
-        footer { margin-top: 50px; font-size: 0.7rem; color: #666; }
-        .agency { margin-top: 10px; font-weight: 600; }
-        .agency a { color: var(--gold-primary); text-decoration: none; }
-
-        @media (max-width: 480px) {
-            h1 { font-size: 1.8rem; }
-            .brand-logo { width: 100px; height: 100px; }
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            font-size: 0.7rem;
+            color: #666;
+            letter-spacing: 1px;
         }
+
+        .agency { margin-top: 8px; font-weight: 600; }
+        .agency a { color: var(--gold); text-decoration: none; }
+
+        /* Animations */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+        @keyframes shimmer { 0% { left: -100%; } 100% { left: 100%; } }
+
     </style>
 </head>
 <body>
 
-<div class="main-container">
-    <img src="https://mahakalx.sbs/wp-content/uploads/2026/02/778gt.jpg" alt="WAY2LAABH" class="brand-logo">
+<div class="container">
+    <div class="brand-wrapper">
+        <img src="https://mahakalx.sbs/wp-content/uploads/2026/02/778gt.jpg" alt="WAY2LAABH Logo" class="brand-logo">
+    </div>
 
-    <h1>PANKAJ BHARDWAJ</h1>
+    <h1>Pankaj Bhardwaj</h1>
     <div class="subtitle">WAY2LAABH™ Mastery</div>
 
-    <div class="glass-box">
-        <p>Master the markets and crush the odds. Join us for <b>real-time analysis</b> and exclusive institutional-grade trading strategies.</p>
+    <div class="card">
+        <p>Elite trading strategies and real-time insights. Join our institutional-grade network for consistent market growth.</p>
         
-        <div class="stats-row">
+        <div class="stats">
             <div class="stat-item">
                 <h3>12.4k+</h3>
                 <p>Winners</p>
@@ -151,7 +194,7 @@
         </div>
     </div>
 
-    <a href="https://t.me/+9Idal1eJo4kyMGM1" class="btn-gold">Join The Winning Streak</a>
+    <a href="https://t.me/+9Idal1eJo4kyMGM1" class="btn">Join The Winning Streak</a>
 
     <footer>
         <p>✦ 18+ | TRADE RESPONSIBLY ✦</p>
